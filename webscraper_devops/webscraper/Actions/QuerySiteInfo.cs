@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace webscraper.Actions
 {
-    class QueryYoutubeVideos
+    class QuerySiteInfo
     {
-        public static void QueryVideos(ChromeDriver Driver)
+        public static void YoutubeVideos()
         {
             // Find all the videos (loaded in the page).
-            IList<IWebElement> videos = Driver.FindElements(By.Id("dismissible"));
+            IList<IWebElement> videos = Globals.driver.FindElements(By.Id("dismissible"));
             // For the first 5 videos print the Title to the console.
             for (int index = 0; index < 5; index++)
             {
@@ -31,6 +31,21 @@ namespace webscraper.Actions
                     // 
                 IWebElement channelLink = (IWebElement)videos[index].FindElement(By.Id("img"));
                 Console.WriteLine(channelLink.GetAttribute("src"));
+            }
+        }
+
+        public static void IndeedJobs()
+        {
+                // Get the jobs shown on the page.
+            IList<IWebElement> allJobs = Globals.driver.FindElements(By.XPath("//a[contains(@class, 'result')]"));
+                // From those jobs, get info per job.
+            for (int index = 0; index < 5; index++)
+            {
+                Console.WriteLine(allJobs.Count);
+                Console.WriteLine("- - Job " + (index + 1) + " info - -");
+
+                IWebElement jobTitle = (IWebElement)allJobs[index].FindElement(By.XPath("//h2[contains(@class, 'jobTitle')]"));
+                Console.WriteLine(jobTitle.Text);
             }
         }
     }

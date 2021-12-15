@@ -69,13 +69,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actions\QueryYoutubeVideos.cs" />
+    <Compile Include="Actions\QuerySiteInfo.cs" />
     <Compile Include="Actions\StartDriver.cs" />
-    <Compile Include="Actions\YoutubeSearch.cs" />
+    <Compile Include="Actions\ActiveWebsiteSearch.cs" />
     <Compile Include="Views\EnterWebsiteName.cs" />
     <Compile Include="Views\HomePage.cs" />
-    <Compile Include="Views\InputYoutubeSearch.cs" />
-    <Compile Include="Views\YoutubeVideoResults.cs" />
+    <Compile Include="Views\InputSearchValue.cs" />
+    <Compile Include="Views\WebsiteResults.cs" />
     <Compile Include="webscraper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

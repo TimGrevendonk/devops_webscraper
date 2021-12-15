@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace webscraper.Views
 {
-    class YoutubeVideoResults
+    class WebsiteResults
     {
         public static void Show()
         {
             Console.Clear();
             Console.WriteLine("~~Webscraper Grevendonk Tim~~");
-            Console.WriteLine("page: YoutubeVideoResults");
+            Console.WriteLine("page: WebsiteResults");
             Console.WriteLine("------------------------------");
             Console.WriteLine(" ");
             Console.WriteLine("press enter to return");

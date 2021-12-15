@@ -10,7 +10,7 @@ namespace webscraper.Actions
 {
     class StartDriver
     {
-        public static ChromeDriver Website(String site)
+        public static void Website(String site)
         {
             // Add the option to disable system logging and add the driver path.
             // -----logging still active, find alternative way-----
@@ -20,11 +20,11 @@ namespace webscraper.Actions
             ChromeDriver Driver = new ChromeDriver(service);
             Driver.Manage().Window.Maximize();
                 // set the timeout value to 10 seconds (will wait until items are loaded for a max of 10 seconds).
-            //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                 // Go to the website (YouTube in this case)
             Driver.Navigate().GoToUrl(site);
-                // return the Driver object.
-            return Driver;
+                // return the driver object.
+            Globals.driver = Driver;
         }
     }
 }

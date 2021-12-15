@@ -15,7 +15,8 @@ namespace webscraper.Views
             Console.WriteLine("page: homePage");
             Console.WriteLine("------------------------------");
             Console.WriteLine(" ");
-            Console.WriteLine("For youtube video info, enter \"Y\":");
+            Console.WriteLine("For Youtube video info, enter \"Y\":");
+            Console.WriteLine("For Jobs info, enter \"J\":");
         }
     }
 }
