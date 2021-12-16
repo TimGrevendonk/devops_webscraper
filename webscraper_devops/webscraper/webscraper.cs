@@ -36,9 +36,7 @@ namespace webscraper
                     //ChromeDriver driver = StartDriver.Website("https://www.youtube.com/");
                     StartDriver.Website("https://www.youtube.com/");
                         // Click Youtube "accept Terms" button.
-                    Globals.driver.FindElement(By.XPath("//*[@id='content']/div[2]/div[5]/div[2]/ytd-button-renderer[2]")).Click();
-                        // sleep/wait for 1,5 seconds to let the items/page load, or else the input field is not fillable.
-                    System.Threading.Thread.Sleep(1500);
+                    AcceptPopupButtons.TryAll();
                         // Show the prompt to enter a search value.
                     InputSearchValue.ShowGeneric();
                     string searchTerm = Console.ReadLine();
@@ -62,11 +60,26 @@ namespace webscraper
                         // Show the prompt to enter a city value.
                     InputSearchValue.ShowAskCity();
                     string searchCity = Console.ReadLine();
-                        // Do a search, filtering on jobs and city.
+                    // Do a search, filtering on jobs and city.
+                    AcceptPopupButtons.TryAll();
                     ActiveWebsiteSearch.SearchForIndeedJobs(searchCity, searchJob);
                         // get the info of the jobs returned.
                     WebsiteResults.Show();
                     QuerySiteInfo.IndeedJobs();
+                        // Any input will return to the big loop.
+                    Console.ReadLine();
+                }
+
+                if (selection == "W")
+                {
+                        // Make driver and browse to belloflostsouls.net
+                    StartDriver.Website("https://www.belloflostsouls.net");
+                    System.Threading.Thread.Sleep(1500);
+                        // Cancel website notifications and accept terms.
+                    AcceptPopupButtons.TryAll();
+                        // Get the info per post.
+                    WebsiteResults.Show();
+                    QuerySiteInfo.BellOfLostSoulsPosts();
                         // Any input will return to the big loop.
                     Console.ReadLine();
                 }

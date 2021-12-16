@@ -17,6 +17,7 @@ namespace webscraper.Views
             Console.WriteLine(" ");
             Console.WriteLine("For Youtube video info, enter \"Y\":");
             Console.WriteLine("For Jobs info, enter \"J\":");
+            Console.WriteLine("For Warhammer info, enter \"W\":");
         }
     }
 }
