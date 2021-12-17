@@ -30,9 +30,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal D:\a\devops_webscraper\devops_webscraper\webscraper_devops\webscraper
       
-    - name: Publish
-      run: dotnet publish -r win-x64 -c Release --self-contained
-      
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       with:
