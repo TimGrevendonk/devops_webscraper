@@ -18,6 +18,9 @@ jobs:
       with:
         dotnet-version: 5.0.x
         
+    - name: debug file structure
+      run: ls -R
+        
     - name: Restore dependencies
       run: dotnet restore devops_webscraper/webscraper_devops/webscraper/
       
