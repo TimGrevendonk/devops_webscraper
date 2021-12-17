@@ -34,4 +34,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Tim_Grevendonk_webscraper
-        path: publish
+        path: D:\a\devops_webscraper\devops_webscraper\webscraper_devops\webscraper
