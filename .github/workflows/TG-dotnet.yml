@@ -22,7 +22,7 @@ jobs:
       run: ls -R
         
     - name: Restore dependencies
-      run: dotnet restore devops_webscraper/webscraper_devops/webscraper/
+      run: dotnet restore D:\a\devops_webscraper\devops_webscraper\webscraper_devops\webscraper
       
     - name: Build
       run: dotnet build --no-restore
