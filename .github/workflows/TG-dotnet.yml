@@ -33,7 +33,7 @@ jobs:
     - name: artifact
       run: |
         mkdir D:\a\devops_webscraper\theExe
-        cd D:\a\devops_webscraper\devops_webscraper\webscraper_devops\webscraper\obj\Debug
+        cd D:\a\devops_webscraper\devops_webscraper\webscraper_devops\webscraper\bin\Debug
         cp webscraper.exe D:\a\devops_webscraper\theExe
         
       
