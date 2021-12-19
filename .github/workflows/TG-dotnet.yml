@@ -30,15 +30,12 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal D:\a\devops_webscraper\devops_webscraper\webscraper_devops\webscraper
       
-    - name: artifact
-      run: |
-        mkdir D:\a\devops_webscraper\theExe
-        cd D:\a\devops_webscraper\devops_webscraper\webscraper_devops\webscraper\bin\Debug
-        cp webscraper.exe D:\a\devops_webscraper\theExe
+    - name: create artifact
+      run: dotnet publish -c Release -r win-x64 /p:PublishSingleFile=true
         
       
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       with:
         name: Tim_Grevendonk_webscraper
-        path: D:\a\devops_webscraper\devops_webscraper\theExe
+        path: devops_webscraper/webscraper_devops/webscraper/bin/Debug/
